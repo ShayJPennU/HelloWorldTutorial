@@ -1,0 +1,26 @@
+<xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans SYSTEM "http://www.springframework.org/dtd/spring-beans.dtd" PUBLIC "-//SPRING//DTD BEAN//EN">
+
+-<beans>
+
+<bean id="${project.artifactId}.workflowBootstrap" parent="workflowDeployer">
+    <property name="workflowDefinitions">
+        <list>
+            <props>
+                <prop key="engineId">activiti</prop>
+                <prop key="location">alfresco/module/${project.artifactId}/workflows/helloWorld.bpmn</prop>
+                <prop key="mimetype">text/xml</prop>
+                <prop key="redeploy">false</prop>
+            </props>
+            <props>
+                <prop key="engineId">activiti</prop>
+                <prop key="location">alfresco/module/${project.artifactId}/workflows/helloWorldUI.bpmn20.xml</prop>
+                <prop key="mimetype">text/xml</prop>
+                <prop key="redeploy">false</prop>
+            </props>
+        </list>
+    </property>
+</bean>
+
+</beans>
